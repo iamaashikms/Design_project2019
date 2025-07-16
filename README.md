@@ -1,15 +1,84 @@
-# Design_project2019
-Arduino code for the design project done by me and my teammates Desly Dominic, Krishnapriya V C, Jathindas A M
-https://github.com/aashik1998/Design_project2019.git
+# Automatic Classroom Lighting and Fan Control System
 
+![Circuit Diagram](circuit_diagram.png)
 
+## Overview
 
-Most of Colleges and Universities use the traditional lighting system where we have a switch to control the lighting. Most of us i.e students and faculty members are habituated towards leaving the class room without switching the lights, Fan, Air-conditioner etc which leads to unnecessary consumption of energy for organization and paying huge amount of bill from their budget. Some of the lighting systems have come with Remote system towards controlling the lighting and fan similar to air conditioner which is being used in homes. But still there is challenge towards leaving the lights and fans unattended when person not in the room. So accordingly, we here in this research have developed Automatic lighting and control using Microcontroller for the efficient use of energy in Class room condition where we have divided the class room into grids. The system developed will control lighting in particular area of classroom, based on the presence of human using passive infrared sensors placed in ceiling which would switch on or off based on presence of human in room irrespective of position. In addition, we also have provided the control of fan speed based on temperature using temperature sensor and relay .
+Most educational institutions still rely on traditional manual lighting and fan control systems, often leading to energy wastage when rooms are left unattended. Our project addresses this issue by implementing an **automated classroom environment management system** using a microcontroller, sensors, and relays.
 
-test
+This system detects human presence to intelligently control lights and regulates fan speed based on the ambient temperature. The objective is to promote efficient energy usage in classrooms with minimal human intervention.
 
+---
 
+## Features
 
+- **Automatic Light Control**:  
+  Lights are turned **ON** or **OFF** depending on the presence of individuals using Passive Infrared (PIR) sensors.
 
+- **Zoned Lighting**:  
+  The classroom is divided into **grids**, enabling selective lighting based on occupancy in each zone.
 
+- **Temperature-Based Fan Control**:  
+  A DHT11 temperature and humidity sensor monitors the environment. Fan speed or switching is automatically adjusted using a relay module based on the temperature.
+
+---
+
+## Hardware Components
+
+- **ESP8266 NodeMCU** (Microcontroller Unit)  
+- **PIR Motion Sensor** (for presence detection)  
+- **DHT11 Sensor** (for temperature and humidity monitoring)  
+- **4-Channel Relay Module** (for controlling lights and fan)  
+- **LED Indicators** (to simulate lighting loads in testing)  
+- **5V DC Power Supply**
+
+---
+
+## Circuit Diagram
+
+![Circuit Diagram](circuit_diagram.png)
+
+### Diagram Analysis
+
+- **Microcontroller**:  
+  The NodeMCU ESP8266 acts as the central processing unit, reading sensor data and activating relays accordingly.
+
+- **PIR Sensor**:  
+  Connected to one of the digital GPIO pins. It detects motion and sends a HIGH signal when human presence is sensed.
+
+- **DHT11 Sensor**:  
+  Measures temperature and humidity. Its output is read by the NodeMCU to determine whether to activate the fan relay.
+
+- **Relay Module**:  
+  Connected to digital pins of the NodeMCU and powered by an external 5V supply. Each relay channel is capable of switching high-current devices like fans and lights.
+
+- **LEDs**:  
+  Used to simulate loads in this prototype. Each LED represents a zone light or a fan. These are connected to the output of the relay module.
+
+---
+
+## Repository Structure
+
+- `circuit_diagram.png` — Circuit layout of the project  
+- `main.ino` — Arduino source code for NodeMCU control logic  
+- `README.md` — Project documentation (this file)  
+
+---
+
+## Contributors
+
+This project was designed and developed as part of our Bachelor's curriculum by:
+
+- Aashik M S ([iamaashikms](https://github.com/iamaashikms))  
+- Desly Dominic  
+- Krishnapriya V C  
+- Jathindas A M
+
+---
+
+## License
+
+This project is open-source and available under the MIT License.
+
+---
 
