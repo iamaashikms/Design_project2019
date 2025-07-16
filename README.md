@@ -1,7 +1,5 @@
 # Automatic Classroom Lighting and Fan Control System
 
-![Circuit Diagram](circuit_diagram.png)
-
 ## Overview
 
 Most educational institutions still rely on traditional manual lighting and fan control systems, often leading to energy wastage when rooms are left unattended. Our project addresses this issue by implementing an **automated classroom environment management system** using a microcontroller, sensors, and relays.
